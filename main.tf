@@ -29,7 +29,4 @@ resource "aws_lb" "main" {
   load_balancer_type = var.load_balancer_type
   security_groups    = [ aws_security_group.main.id ]
   subnets            = var.subnets
-  tags = {
-    Environment = merge ({ Name = "${var.name}-${var.env}-lb" }, var.tags)
-  }
-}
+  tags = { merge ({ Name = "${var.component}-${var.env}" }, var.tags)  } }
