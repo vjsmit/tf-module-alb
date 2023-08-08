@@ -5,7 +5,4 @@ variable "subnets" {}
 variable "env" {}
 variable "tags" {}
 variable "vpc_id" {}
-variable "port" {
-  default = 80
-}
 variable "sg_subnets_cidr" {}
